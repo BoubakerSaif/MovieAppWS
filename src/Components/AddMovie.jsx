@@ -4,12 +4,13 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import Rating from "@mui/material/Rating";
 
-const AddMovie = () => {
+const AddMovie = ({ movies, setMovies, addingMovie }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   const [newMovie, setNewMovie] = useState({
+    id: Math.random(),
     title: "",
     description: "",
     posterURL: "",
@@ -19,7 +20,17 @@ const AddMovie = () => {
   const onChangeHandler = (e) => {
     setNewMovie({ ...newMovie, [e.target.name]: e.target.value });
   };
-  console.log(newMovie);
+
+  const confirmHandler = (e) => {
+    e.preventDefault();
+    // First Method
+    addingMovie(newMovie);
+
+    //Second Method
+    // setMovies([...movies, newMovie]);
+    handleClose();
+  };
+  // console.log(newMovie);
   // 2eme méthode
   //   const [title, setTitle] = useState("");
   //   const [description, setDescription] = useState("");
@@ -90,7 +101,7 @@ const AddMovie = () => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="primary" onClick={handleClose}>
+          <Button variant="primary" onClick={confirmHandler}>
             Confirm
           </Button>
         </Modal.Footer>
