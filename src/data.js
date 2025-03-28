@@ -1,6 +1,6 @@
 const data = [
   {
-    id: 1,
+    id: "1",
     title: "John Wick : Chapitre 4",
     description:
       "John Wick faces his deadliest adversaries in the fourth installment of the series. So, enjoy watching this movie and have fun.",
@@ -11,7 +11,7 @@ const data = [
       "https://www.youtube.com/embed/qEVUtrk8_B4?si=DuqNmjCY5MLEqzV5",
   },
   {
-    id: 2,
+    id: "2",
     title: "Fast & Furious X",
     description:
       "During numerous missions and against all odds, Dom Toretto and his family have outwitted and overtaken all enemies in their path.",
@@ -21,7 +21,7 @@ const data = [
       "https://www.youtube.com/embed/32RAq6JzY-w?si=YdEnEnw6bB9t3dnt",
   },
   {
-    id: 3,
+    id: "3",
     title: "The Batman",
     description:
       "When a sadistic serial killer begins murdering key political figures in Gotham, the Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
